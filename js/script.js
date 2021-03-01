@@ -19,7 +19,6 @@ class Todo {
         this.todoCompleted.textContent = '';
         this.todoData.forEach(this.createItem, this);
         this.addToStorage();
-
     }
 
     createItem(todo) {
@@ -51,6 +50,7 @@ class Todo {
             };
             this.todoData.set(newTodo.key, newTodo);
             this.render();
+            this.input.value = '';
         }
     }
 
@@ -75,7 +75,6 @@ class Todo {
                 } else {
                     item.completed = true;
                 }
-
                 this.render();
             }
         });
